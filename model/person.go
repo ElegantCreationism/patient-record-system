@@ -4,43 +4,43 @@ import "fmt"
 
 
 type Person struct {
-	Name
+	name
 	Age int
 	Gender string
 	Address string
 	DOB string
 }
 
-type Name struct {
+type name struct {
 	first string
 	last string
 }
 
-func (n *Name) FullName() {
+func (n *name) FullName() {
 	fmt.Printf("%s %s", n.first, n.last)
 }
 
-func (n *Name) FirstName() {
+func (n *name) FirstName() {
 	fmt.Printf("%s", n.first)
 }
 
-func (n *Name) LastName() {
+func (n *name) LastName() {
 	fmt.Printf("%s", n.last)
 }
 
 func NewPerson(age int, firstName, lastName, gender, address, dateOfBirth string) *Person {
 	name := newName(firstName, lastName)
 	return &Person{
-		Name:        *name,
-		Age:         age,
-		Gender:      gender,
-		Address:     address,
-		DOB: 		 dateOfBirth,
+		name:    *name,
+		Age:     age,
+		Gender:  gender,
+		Address: address,
+		DOB:     dateOfBirth,
 	}
 }
 
-func newName(firstname, lastname string) *Name {
-	return &Name{
+func newName(firstname, lastname string) *name {
+	return &name{
 		first: firstname,
 		last:  lastname,
 	}

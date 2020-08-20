@@ -1,0 +1,11 @@
+{
+  "patient": {
+    "firstName": "",
+    "lastName": "",
+    "age": "",
+    "address": "",
+    "gender": "",
+    "dateOfBirth": "",
+
+  }
+}
